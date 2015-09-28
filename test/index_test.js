@@ -18,7 +18,9 @@ exports['index'] = function (test) {
     test.ok(!index('foo').is('number'));
     test.ok(!index(123).is('string'));
     test.ok(index('foo').is('string'));
+    test.ok(index('foo').isString());
     test.ok(index(function(){}).is('function'));
+    test.ok(index(function(){}).isFunction());
     test.ok(!index('1234').is('function'));
     test.ok(!index(123).is('function'));
     test.done();
