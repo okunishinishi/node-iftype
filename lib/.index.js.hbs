@@ -7,9 +7,16 @@
 "use strict";
 
 var IfType = require('./iftype'),
+    is = require('./is'),
     create = require('./create');
 
 var lib = create.bind();
 lib.create = create;
 lib.IfType = IfType;
+
+lib.is = is;
+{{#each types}}
+lib.is{{pascalcase this}} = is.bind('{{this}}');
+{{/each}}
+
 module.exports = lib;

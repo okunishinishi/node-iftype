@@ -14,7 +14,7 @@ module.exports = {
                 {text:'["foo", "bar"]', val:["foo", "bar"]},
                 {text:'"bar"', val:"bar"},
                 {text:"null", val: null},
-                {text:"undefined", val: undefined},
+                {text:"undefined", val: undefined}
             ];
             var types = [
                 'string',
