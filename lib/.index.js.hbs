@@ -16,7 +16,7 @@ lib.IfType = IfType;
 
 lib.is = is;
 {{#each types}}
-lib.is{{pascalcase this}} = is.bind('{{this}}');
+lib.is{{pascalcase this}} = is.bind(lib, '{{this}}');
 {{/each}}
 
 module.exports = lib;
