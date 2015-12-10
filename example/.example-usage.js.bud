@@ -1,7 +1,10 @@
 "use strict";
 
-var iftype = require('../lib'),
+const iftype = require('../lib'),
     arrayreduce = require('arrayreduce');
+
+function CustomType() {
+}
 
 module.exports = {
     force: true,
@@ -9,19 +12,26 @@ module.exports = {
     data: {
         get is() {
             var args = [
-                {text:'123', val:123},
-                {text:'function foo(){}', val:function foo(){}},
-                {text:'["foo", "bar"]', val:["foo", "bar"]},
-                {text:'"bar"', val:"bar"},
-                {text:"null", val: null},
-                {text:"undefined", val: undefined}
+                {text: '123', val: 123},
+                {
+                    text: 'function foo(){}', val: function foo() {
+                }
+                },
+                {
+                    text: 'new CustomType()', val: new CustomType()
+                },
+                {text: '["foo", "bar"]', val: ["foo", "bar"]},
+                {text: '"bar"', val: "bar"},
+                {text: "null", val: null},
+                {text: "undefined", val: undefined}
             ];
             var types = [
-                'string',
-                'number',
-                'object',
-                'array',
-                'function'
+                "'string'",
+                "'number'",
+                "'object'",
+                "'array'",
+                "'function'",
+                "CustomType"
             ];
             return types.map(function (type) {
                 return {

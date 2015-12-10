@@ -1,27 +1,26 @@
 /**
  * Test case for parseType.
- * Runs with nodeunit.
+ * Runs with mocha.
  */
+"use strict";
 
-var parseType = require('../lib/type/parse_type.js');
+const parseType = require('../lib/type/parse_type.js'),
+    assert = require('assert');
 
-exports.setUp = function (done) {
-    done();
-};
 
-exports.tearDown = function (done) {
-    done();
-};
+describe('parse type', () => {
 
-exports['Parse type'] = function (test) {
-    test.equal(parseType('number'), 'number');
-    test.equal(parseType('Number'), 'number');
-    test.equal(parseType(' number '), 'number');
-    test.equal(parseType(' Number '), 'number');
-    test.equal(parseType(Function), 'function');
-    test.equal(parseType(String), 'string');
-    test.equal(parseType(Array), 'array');
-    test.equal(parseType(Number), 'number');
-    test.done();
-};
+    it('Parse type', (done) => {
+        assert.equal(parseType('number'), 'number');
+        assert.equal(parseType('Number'), 'number');
+        assert.equal(parseType(' number '), 'number');
+        assert.equal(parseType(' Number '), 'number');
+        assert.equal(parseType(Function), 'function');
+        assert.equal(parseType(String), 'string');
+        assert.equal(parseType(Array), 'array');
+        assert.equal(parseType(Number), 'number');
+        done();
+    });
+
+});
 

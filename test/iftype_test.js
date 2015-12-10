@@ -1,35 +1,32 @@
 /**
  * Test case for iftype.
- * Runs with nodeunit.
+ * Runs with mocha.
  */
+"use strict";
 
-var Iftype = require('../lib/iftype.js');
+const Iftype = require('../lib/iftype.js'),
+    assert = require('assert');
 
-exports.setUp = function (done) {
-    done();
-};
+describe('iftype', () => {
 
-exports.tearDown = function (done) {
-    done();
-};
-
-exports['Iftype'] = function (test) {
-    test.ok(new Iftype(1).is('number'));
-    test.ok(!new Iftype('foo').is('number'));
-    test.ok(new Iftype(1).isNumber());
-    test.ok(!new Iftype('foo').isNumber());
-    test.ok(!new Iftype(123).is('string'));
-    test.ok(!new Iftype(123).isString());
-    test.ok(new Iftype('foo').is('string'));
-    test.ok(new Iftype('foo').isString());
-    test.ok(new Iftype(function () {
-    }).is('function'));
-    test.ok(new Iftype(function () {
-    }).isFunction());
-    test.ok(!new Iftype('1234').is('function'));
-    test.ok(!new Iftype('1234').isFunction());
-    test.ok(!new Iftype(123).is('function'));
-    test.ok(!new Iftype(123).isFunction());
-    test.done();
-};
+    it('Iftype', (done) => {
+        assert.ok(new Iftype(1).is('number'));
+        assert.ok(!new Iftype('foo').is('number'));
+        assert.ok(new Iftype(1).isNumber());
+        assert.ok(!new Iftype('foo').isNumber());
+        assert.ok(!new Iftype(123).is('string'));
+        assert.ok(!new Iftype(123).isString());
+        assert.ok(new Iftype('foo').is('string'));
+        assert.ok(new Iftype('foo').isString());
+        assert.ok(new Iftype(function () {
+        }).is('function'));
+        assert.ok(new Iftype(function () {
+        }).isFunction());
+        assert.ok(!new Iftype('1234').is('function'));
+        assert.ok(!new Iftype('1234').isFunction());
+        assert.ok(!new Iftype(123).is('function'));
+        assert.ok(!new Iftype(123).isFunction());
+        done();
+    });
+});
 

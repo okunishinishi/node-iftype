@@ -6,11 +6,11 @@
 
 "use strict";
 
-var is = require('./is');
+const is = require('./is');
 
 /** @lends Iftype */
 function Iftype(val) {
-    var s = this;
+    let s = this;
     s.val(val);
 }
 
@@ -21,7 +21,7 @@ Iftype.prototype = {
      * @returns {boolean} - Type matches or not.
      */
     is: function typeIs(type) {
-        var s = this;
+        let s = this;
         return is(type, s.val());
     },
 {{#each types}}
@@ -30,12 +30,12 @@ Iftype.prototype = {
      * @returns {boolean} - Type matches or not.
      */
     is{{pascalcase this}}: function is{{pascalcase this}}Type() {
-        var s = this;
+        let s = this;
         return s.is('{{this}}');
     },
 {{/each}}
     val: function(val){
-        var s = this;
+        let s = this;
         if (arguments.length === 0) {
             return s._val;
         }

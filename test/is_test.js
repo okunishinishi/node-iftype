@@ -1,20 +1,16 @@
 /**
  * Test case for is.
- * Runs with nodeunit.
+ * Runs with mocha.
  */
+"use strict";
 
-var is = require('../lib/is.js');
+const is = require('../lib/is.js');
 
-exports.setUp = function(done) {
-    done();
-};
+describe('is', () => {
 
-exports.tearDown = function(done) {
-    done();
-};
+    it('Is', (done) => {
 
-exports['Is'] = function(test){
-
-    test.done();
-};
+        done();
+    });
+});
 

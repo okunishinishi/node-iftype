@@ -6,11 +6,11 @@
 
 "use strict";
 
-var IfType = require('./iftype'),
+const IfType = require('./iftype'),
     is = require('./is'),
     create = require('./create');
 
-var lib = create.bind();
+let lib = create.bind();
 lib.create = create;
 lib.IfType = IfType;
 
