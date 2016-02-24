@@ -48,9 +48,9 @@ Check types
 <!-- Sections Start -->
 <a name="sections"></a>
 
-<!-- Section from "doc/readme/01.Installation.md.hbs" Start -->
+<!-- Section from "doc/guides/01.Installation.md.hbs" Start -->
 
-<a name="section-doc-readme-01-installation-md"></a>
+<a name="section-doc-guides-01-installation-md"></a>
 Installation
 -----
 
@@ -59,11 +59,11 @@ $ npm install iftype --save
 ```
 
 
-<!-- Section from "doc/readme/01.Installation.md.hbs" End -->
+<!-- Section from "doc/guides/01.Installation.md.hbs" End -->
 
-<!-- Section from "doc/readme/02.Usage.md.hbs" Start -->
+<!-- Section from "doc/guides/02.Usage.md.hbs" Start -->
 
-<a name="section-doc-readme-02-usage-md"></a>
+<a name="section-doc-guides-02-usage-md"></a>
 Usage
 ---------
 
@@ -151,11 +151,11 @@ iftype(undefined).is(CustomType); // => false
 ```
 
 
-<!-- Section from "doc/readme/02.Usage.md.hbs" End -->
+<!-- Section from "doc/guides/02.Usage.md.hbs" End -->
 
-<!-- Section from "doc/readme/03.API.md.hbs" Start -->
+<!-- Section from "doc/guides/03.API.md.hbs" Start -->
 
-<a name="section-doc-readme-03-a-p-i-md"></a>
+<a name="section-doc-guides-03-a-p-i-md"></a>
 API
 ----
 
@@ -172,7 +172,7 @@ API
 | iftype.isObject(val) | Check if object. |
 | iftype.isArray(val) | Check if array. |
 
-<!-- Section from "doc/readme/03.API.md.hbs" End -->
+<!-- Section from "doc/guides/03.API.md.hbs" End -->
 
 
 <!-- Sections Start -->

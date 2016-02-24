@@ -1,7 +1,6 @@
 "use strict";
 
-const iftype = require('../lib'),
-    arrayreduce = require('arrayreduce');
+const iftype = require('../lib');
 
 function CustomType() {
 }
@@ -11,7 +10,7 @@ module.exports = {
     mode: '444',
     data: {
         get is() {
-            var args = [
+            let args = [
                 {text: '123', val: 123},
                 {
                     text: 'function foo(){}', val: function foo() {
@@ -25,7 +24,7 @@ module.exports = {
                 {text: "null", val: null},
                 {text: "undefined", val: undefined}
             ];
-            var types = [
+            let types = [
                 "'string'",
                 "'number'",
                 "'object'",
@@ -33,18 +32,18 @@ module.exports = {
                 "'function'",
                 "CustomType"
             ];
-            return types.map(function (type) {
-                return {
+            return types.map(type =>
+                ({
                     type: type,
-                    tests: args.map(function (arg) {
-                        return {
+                    tests: args.map(arg =>
+                        ({
                             arg: arg.text,
                             type: type,
                             result: iftype(arg.val).is(eval(type))
-                        }
-                    })
-                }
-            });
+                        })
+                    )
+                })
+            );
         }
     }
 };
