@@ -3,6 +3,7 @@
   "version": "3.0.0",
   "description": "Check types",
   "main": "lib",
+  "browser": "shim/browser",
   "scripts": {
     "test": "./ci/test.js",
     "prepublish": "./ci/build.js && ./ci/browser.js"
