@@ -1,13 +1,13 @@
-"use strict";
+'use strict'
 
 module.exports = {
-    force: true,
-    mode: '444',
-    data: {
-        types: 'string,number,object,array,function'.split(',')
-    }
-};
+  force: true,
+  mode: '444',
+  data: {
+    types: 'string,number,object,array,function'.split(',')
+  }
+}
 
 if (!module.parent) {
-    require('coz').render(__filename);
+  require('coz').render(__filename)
 }

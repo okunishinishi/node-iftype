@@ -4,19 +4,19 @@
  * @version {{pkg.version}}
  */
 
-"use strict";
+'use strict'
 
-const IfType = require('./iftype'),
-    is = require('./is'),
-    create = require('./create');
+const IfType = require('./iftype')
+const is = require('./is')
+const create = require('./create')
 
-let lib = create.bind();
-lib.create = create;
-lib.IfType = IfType;
+let lib = create.bind()
+lib.create = create
+lib.IfType = IfType
 
-lib.is = is;
+lib.is = is
 {{#each types}}
-lib.is{{pascalcase this}} = is.bind(lib, '{{this}}');
+lib.is{{pascalcase this}} = is.bind(lib, '{{this}}')
 {{/each}}
 
-module.exports = lib;
+module.exports = lib
