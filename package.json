@@ -1,6 +1,6 @@
 {
   "name": "iftype",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "Check types",
   "main": "shim/node",
   "browser": "shim/browser",
@@ -23,7 +23,9 @@
     "url": "https://github.com/okunishinishi/node-iftype/issues"
   },
   "homepage": "https://github.com/okunishinishi/node-iftype#readme",
-  "dependencies": {},
+  "dependencies": {
+    "babel-runtime": "^6.11.6"
+  },
   "devDependencies": {
     "ababel": "^1.0.25",
     "ababel-es2015": "^1.0.5",
