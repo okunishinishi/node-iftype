@@ -1,6 +1,6 @@
 {
   "name": "iftype",
-  "version": "4.0.2",
+  "version": "4.0.3",
   "description": "Check types",
   "main": "lib",
   "browser": "shim/browser",
@@ -25,6 +25,7 @@
   "homepage": "https://github.com/okunishinishi/node-iftype#readme",
   "dependencies": {},
   "devDependencies": {
+    "@babel/runtime": "^7.3.1",
     "ababel": "^5.0.9",
     "amocha": "^5.0.0",
     "ape-releasing": "^5.0.0",

@@ -4,7 +4,7 @@
  */
 'use strict'
 
-const Iftype = require('../shim/node/iftype.js')
+const Iftype = require('../shim/browser/iftype.js')
 const assert = require('assert')
 
 describe('iftype', () => {
